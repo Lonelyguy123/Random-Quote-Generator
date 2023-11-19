@@ -1,0 +1,59 @@
+/* Generator.css */
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh; /* Ensure the container takes at least the full height of the viewport */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 132, 0, 0.972);
+}
+
+
+/* Quote text styles */
+.Quote {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Line separator styles */
+.line {
+  height: 2px;
+  background-color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Bottom section styles */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Author styles */
+.Author {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Icons container styles */
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Responsive image styles */
+.icons img {
+  max-width: 24px;
+  height: auto;
+}
+
