@@ -5,7 +5,7 @@ import './Categorybased.css';
 
 const QuotesGenerator = () => {
   const [selectedCategory, setSelectedCategory] = useState(''); // State to hold the selected category
-  const [quote, setQuote] = useState({ text: '', author: '' });
+  const [quote, setQuote] = useState({ text: 'New Quote', author: 'New Author' });
 
   const categories = [
     'age', 'alone', 'amazing', 'anger', 'architecture', 'art', 'attitude', 'beauty',
@@ -50,7 +50,7 @@ const QuotesGenerator = () => {
   }, [selectedCategory])
 
   return (
-    <div className="dropdown">
+    <div>
       <Dropdown options={categories} onSelect={setSelectedCategory} />
       <div>
         <div className="contain">      

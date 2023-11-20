@@ -3,7 +3,7 @@ import refreshicon from '../assets/refresh-icon.png';
 import './Generator.css';
 
 const Generator = () => {
-  const [quote, setQuote] = useState({ author: 'Loading...', text: 'Loading...' });
+  const [quote, setQuote] = useState({ author: 'New author', text: 'New quote' });
 
   async function loadQuote() {
     try {

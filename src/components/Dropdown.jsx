@@ -1,5 +1,6 @@
 // Dropdown.jsx
 import React, { useState } from 'react';
+import './Dropdown.css';
 
 const Dropdown = ({ options, onSelect }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]);
@@ -11,13 +12,15 @@ const Dropdown = ({ options, onSelect }) => {
   };
 
   return (
-    <select value={selectedOption} onChange={handleSelectChange}>
+    <div className="dropdown">   
+    <select className="dropdown-select" value={selectedOption} onChange={handleSelectChange}>
       {options.map((option) => (
-        <option key={option} value={option}>
+        <option key={option} value={option} className="dropdown-option">
           {option}
         </option>
       ))}
     </select>
+    </div>
   );
 };
 
