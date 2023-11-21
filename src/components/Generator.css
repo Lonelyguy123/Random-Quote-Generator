@@ -16,6 +16,15 @@
 }
 
 
+.container.active {
+  /* Updated styles for the active state */
+  border-color: rgb(234, 0, 255);
+  border-width: 2px; /* Increase border width for emphasis */
+  box-shadow: 0 0 15px rgba(0, 166, 255, 0.8); /* Increase box shadow for emphasis */
+} /* Example box shadow for active state */
+
+
+
 /* Quote text styles */
 .Quote {
   font-size: 24px;

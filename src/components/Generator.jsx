@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import refreshicon from '../assets/refresh-icon.png';
 import './Generator.css';
 
 const Generator = () => {
+  const containerref = useRef(null);
   const [quote, setQuote] = useState({ author: 'New author', text: 'New quote' });
 
   async function loadQuote() {
@@ -32,8 +33,13 @@ const Generator = () => {
     }
   }
 
+  const Handleclick = () => {
+    const container = containerref.current;
+    container.classList.add('active');
+  }
+
   return (
-    <div className="container">
+    <div ref={containerref} className="container">
       <div className="Quote">{quote.text}</div>
       <div>
         <div className="line"></div>
@@ -41,7 +47,7 @@ const Generator = () => {
           <div>
             <div className="Author">{quote.author}</div>
             <div className="icons">
-              <img src={refreshicon} onClick={loadQuote} alt="" />
+            <img src={refreshicon} onClick={(event) => { loadQuote(); Handleclick(); }} alt="" />
             </div>
           </div>
         </div>

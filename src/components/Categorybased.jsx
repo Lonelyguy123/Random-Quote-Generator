@@ -1,11 +1,11 @@
 // QuotesGenerator.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import Dropdown from './Dropdown';
 import './Categorybased.css';
-
 const QuotesGenerator = () => {
-  const [selectedCategory, setSelectedCategory] = useState(''); // State to hold the selected category
+    const [selectedCategory, setSelectedCategory] = useState(''); // State to hold the selected category
   const [quote, setQuote] = useState({ text: 'New Quote', author: 'New Author' });
+  const containref = useRef(null);
 
   const categories = [
     'age', 'alone', 'amazing', 'anger', 'architecture', 'art', 'attitude', 'beauty',
@@ -46,14 +46,23 @@ const QuotesGenerator = () => {
           });
         })
         .catch((error) => console.error('Error fetching quote:', error));
+
+        if (quote.text !== 'New author') {
+          Handleclic();
+        }
     }
   }, [selectedCategory])
 
+  const Handleclic = () => {
+    const contain = containref.current;
+    contain.classList.add('active');
+  }
+
   return (
     <div>
-      <Dropdown options={categories} onSelect={setSelectedCategory} />
+      <Dropdown options={categories} onSelect={setSelectedCategory}  />
       <div>
-        <div className="contain">      
+        <div ref={containref} className="contain">      
         <div className="Q">{quote.text}</div>
         <div className="l"></div>
         <div className="b">
