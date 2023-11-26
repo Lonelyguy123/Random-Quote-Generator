@@ -4,6 +4,7 @@ import React from 'react';
 import Generator from "./components/Generator";
 import Homepage from "./components/Homepage";
 import Categorybased from "./components/Categorybased";
+import Login from './components/Login';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/Generator" element={<Generator />} />
         <Route path="/Categorybased" element={<Categorybased />} />
-        <Route path="/" element={<Homepage />} />
+        <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );

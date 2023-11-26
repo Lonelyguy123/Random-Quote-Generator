@@ -2,7 +2,7 @@
 .titl {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #1c2d8b;
+    color: goldenrod;
   }
   
   /* Style for the paragraph */
@@ -14,9 +14,9 @@
   
   /* Style for the buttons */
   .button1 {
-    background-color: #1c2d8b;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #8b1c1c;
+    color: rgb(255, 255, 255);
+    padding: 20px 20px;
     font-size: 1em;
     text-decoration: none;
     display: inline-block;
